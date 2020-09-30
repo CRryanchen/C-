@@ -1,0 +1,31 @@
+// stringbad.h -- flawed string class definition
+#ifndef 12.1_STRINGBAD_H_
+#define 12.1_STRINGBAD_H_
+
+#include <iostream>
+
+class StringBad
+{
+private:
+    char * str;
+    int len;
+    static int num_strings;
+public:
+    StringBad();
+    StringBad(const char *s);
+    ~StringBad();
+    friend std::ostream & operator<<(std::ostream & os, const StringBad & st);
+};
+
+StringBad::StringBad()
+
+StringBad(const char *s);{
+    friend std::ostream & operator<<(std::ostream & os, const StringBad & st);
+}
+
+StringBad::~StringBad()
+{
+}
+
+
+#endif
