@@ -1,7 +1,6 @@
 // stringbad.h -- flawed string class definition
-#ifndef 12.1_STRINGBAD_H_
-#define 12.1_STRINGBAD_H_
-
+#ifndef STRINGBAD_H_
+#define STRINGBAD_H_
 #include <iostream>
 
 class StringBad
@@ -16,16 +15,5 @@ public:
     ~StringBad();
     friend std::ostream & operator<<(std::ostream & os, const StringBad & st);
 };
-
-StringBad::StringBad()
-
-StringBad(const char *s);{
-    friend std::ostream & operator<<(std::ostream & os, const StringBad & st);
-}
-
-StringBad::~StringBad()
-{
-}
-
 
 #endif
