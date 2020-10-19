@@ -37,8 +37,6 @@ int main()
     cout << "morefixing.operator+(total) = ";
     total.Show();
     cout << endl;
-
-    return 0;
-
+    
     return 0;
 }
