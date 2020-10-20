@@ -8,19 +8,31 @@ int main()
     using namespace std;
 
     cout << "Enetr your name: ";
-    string name;
-    cin >> name;
-    cin.get();
+    char name[8];
+    cin.get(name, sizeof(name));
+    if (cin.peek() != '\n')
+    {
+        cout << "字符数组太小，容纳不下" << endl;
+    }
+    while (cin.get() != '\n')// 丢弃该行剩下的内容（包括换行）
+    {
+        continue;
+    }
     cout << "Enter hourly wages: ";
     int wage;
     cin >> wage;
-    cin.get();
     cout << "Enter of hours worked: ";
     float hours;
     cin >> hours;
 
     cout << "First format:" << endl;
-    cout << setw(20) << name
-         << ": $" << setw(8) << wage
+    cout << setw(25) << name
+         << ": $" << setw(8) << wage << ":"
+         << setw(9) << hours << endl;
+
+    cout << left;// 左对齐
+    cout << "Second format:" << endl;
+    cout << setw(25) << name
+         << ": $" << setw(8) << wage << ":"
          << setw(9) << hours << endl;
 }
